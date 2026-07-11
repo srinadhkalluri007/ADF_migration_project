@@ -1,0 +1,29 @@
+{
+	"name": "DS_JSON_COPY",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_JSON_COPY",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "output"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"TableName": {
+					"type": "string"
+				},
+				"WaterMarkColumn": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

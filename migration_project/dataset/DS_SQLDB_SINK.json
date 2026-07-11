@@ -1,0 +1,17 @@
+{
+	"name": "DS_SQLDB_SINK",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SQLDB_SINK",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Target_Orders"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

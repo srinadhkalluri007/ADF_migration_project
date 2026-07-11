@@ -1,0 +1,13 @@
+{
+	"name": "DS_SQLSERVER_TBLKP",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_SQLSERVER_TBLKP",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
