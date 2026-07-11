@@ -1,0 +1,1052 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "dfsritest007"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
+		},
+		"AzureDataLakeStorage10_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage10'"
+		},
+		"AzureDataLakeStorage11_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage11'"
+		},
+		"AzureDataLakeStorage12_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage12'"
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage2'"
+		},
+		"AzureDataLakeStorage3_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage3'"
+		},
+		"AzureDataLakeStorage4_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage4'"
+		},
+		"AzureDataLakeStorage5_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage5'"
+		},
+		"AzureDataLakeStorage6_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage6'"
+		},
+		"AzureDataLakeStorage7_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage7'"
+		},
+		"AzureDataLakeStorage8_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage8'"
+		},
+		"AzureDataLakeStorage9_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage9'"
+		},
+		"DS_COPY_TABLES_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'DS_COPY_TABLES'"
+		},
+		"DS_copy_latest_file_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'DS_copy_latest_file'"
+		},
+		"DS_delete_file_006_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'DS_delete_file_006'"
+		},
+		"LS_COPY_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_COPY'"
+		},
+		"LS_COPY_GEN2_007_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_COPY_GEN2_007'"
+		},
+		"LS_COPY_SALES_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_COPY_SALES'"
+		},
+		"LS_COPY_SWITCH_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_COPY_SWITCH'"
+		},
+		"LS_COPY_SWITCH_007_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_COPY_SWITCH_007'"
+		},
+		"LS_COPY_SWITCH_GEN2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_COPY_SWITCH_GEN2'"
+		},
+		"LS_CSV_COPY_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_CSV_COPY'"
+		},
+		"LS_CSV_GEN2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_CSV_GEN2'"
+		},
+		"LS_DELETE_FILE_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_DELETE_FILE'"
+		},
+		"LS_EACH_COPY_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_EACH_COPY'"
+		},
+		"LS_JSON_COPY_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_JSON_COPY'"
+		},
+		"LS_JSON_GEN2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_JSON_GEN2'"
+		},
+		"LS_JSON_LOOKUP_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_JSON_LOOKUP'"
+		},
+		"LS_LATEST_FILE_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_LATEST_FILE'"
+		},
+		"LS_LKP_MAX_VALUE_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_LKP_MAX_VALUE'"
+		},
+		"LS_LOAD_CSV_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_LOAD_CSV'"
+		},
+		"LS_LOOKUP_CSV_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_LOOKUP_CSV'"
+		},
+		"LS_LOOKUP_MAX_VALUE_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_LOOKUP_MAX_VALUE'"
+		},
+		"LS_LOOKUP_gen2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_LOOKUP_gen2'"
+		},
+		"LS_LOOK_MAX_VALUE_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_LOOK_MAX_VALUE'"
+		},
+		"LS_METADATA_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_METADATA'"
+		},
+		"LS_METADATA_EACH_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_METADATA_EACH'"
+		},
+		"LS_ON_SQL_SERVER_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_ON_SQL_SERVER'"
+		},
+		"LS_SQLDB_CSV_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_SQLDB_CSV'"
+		},
+		"LS_SQLDB_SINK_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_SQLDB_SINK'"
+		},
+		"LS_SQLDB_SOURCE_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_SQLDB_SOURCE'"
+		},
+		"LS_SQLDB_TABLES_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_SQLDB_TABLES'"
+		},
+		"LS_SQLDB_WATERMARK_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_SQLDB_WATERMARK'"
+		},
+		"LS_SQLSERVER_TBLKP_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_SQLSERVER_TBLKP'"
+		},
+		"LS_SQLTABLES_COPY_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_SQLTABLES_COPY'"
+		},
+		"LS_copy_gen2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_copy_gen2'"
+		},
+		"LS_delete_file_007_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_delete_file_007'"
+		},
+		"LS_lookupdata_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_lookupdata'"
+		},
+		"LS_sqldb_multi_tables_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_sqldb_multi_tables'"
+		},
+		"Ls_delete_007_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'Ls_delete_007'"
+		},
+		"Lslookup_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'Lslookup'"
+		},
+		"linkedService1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'linkedService1'"
+		},
+		"linkedService2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'linkedService2'"
+		},
+		"linkedService3_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'linkedService3'"
+		},
+		"ls_for_each_csv_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_for_each_csv'"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage10_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage11_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage12_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage3_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage4_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage5_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage6_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage7_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage8_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage9_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"DS_COPY_TABLES_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"DS_copy_latest_file_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"DS_delete_file_006_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_COPY_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_COPY_GEN2_007_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_COPY_SALES_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_COPY_SWITCH_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_COPY_SWITCH_007_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_COPY_SWITCH_GEN2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_CSV_COPY_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_CSV_GEN2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_DELETE_FILE_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_EACH_COPY_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_JSON_COPY_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_JSON_GEN2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_JSON_LOOKUP_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_LATEST_FILE_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_LKP_MAX_VALUE_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "PAVANI-PC\\SQLEXPRESS"
+		},
+		"LS_LKP_MAX_VALUE_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ad_migration_project"
+		},
+		"LS_LKP_MAX_VALUE_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "srinadhazure"
+		},
+		"LS_LOAD_CSV_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_LOOKUP_CSV_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_LOOKUP_MAX_VALUE_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "PAVANI-PC\\SQLEXPRESS"
+		},
+		"LS_LOOKUP_MAX_VALUE_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ad_migration_project"
+		},
+		"LS_LOOKUP_MAX_VALUE_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "srinadhazure"
+		},
+		"LS_LOOKUP_gen2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_LOOK_MAX_VALUE_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "PAVANI-PC\\SQLEXPRESS"
+		},
+		"LS_LOOK_MAX_VALUE_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ad_migration_project"
+		},
+		"LS_LOOK_MAX_VALUE_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "srinadhazure"
+		},
+		"LS_METADATA_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_METADATA_EACH_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_ON_SQL_SERVER_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "PAVANI-PC\\SQLEXPRESS"
+		},
+		"LS_ON_SQL_SERVER_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ad_migration_project"
+		},
+		"LS_ON_SQL_SERVER_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "srinadhazure"
+		},
+		"LS_SQLDB_CSV_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_SQLDB_SINK_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "adlstestserver007.database.windows.net"
+		},
+		"LS_SQLDB_SINK_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "testdata"
+		},
+		"LS_SQLDB_SINK_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "srinadhadmin"
+		},
+		"LS_SQLDB_SOURCE_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "adlstestserver007.database.windows.net"
+		},
+		"LS_SQLDB_SOURCE_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "testdata"
+		},
+		"LS_SQLDB_SOURCE_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "srinadhadmin"
+		},
+		"LS_SQLDB_TABLES_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "adlstestserver007.database.windows.net"
+		},
+		"LS_SQLDB_TABLES_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "testdata"
+		},
+		"LS_SQLDB_TABLES_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "srinadhadmin"
+		},
+		"LS_SQLDB_WATERMARK_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "adlstestserver007.database.windows.net"
+		},
+		"LS_SQLDB_WATERMARK_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "testdata"
+		},
+		"LS_SQLDB_WATERMARK_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "srinadhadmin"
+		},
+		"LS_SQLSERVER_TBLKP_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "PAVANI-PC\\SQLEXPRESS"
+		},
+		"LS_SQLSERVER_TBLKP_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "ad_migration_project"
+		},
+		"LS_SQLSERVER_TBLKP_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "srinadhazure"
+		},
+		"LS_SQLTABLES_COPY_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_copy_gen2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_delete_file_007_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_http_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com"
+		},
+		"LS_lookupdata_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "PAVANI-PC\\SQLEXPRESS"
+		},
+		"LS_lookupdata_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "college"
+		},
+		"LS_lookupdata_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "srinadhazure"
+		},
+		"LS_sqldb_multi_tables_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "adlstestserver007.database.windows.net"
+		},
+		"LS_sqldb_multi_tables_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "testdata"
+		},
+		"LS_sqldb_multi_tables_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "srinadhadmin"
+		},
+		"Ls_delete_007_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"Lslookup_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"ls_for_each_csv_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "dfsritest007_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureDataLakeStorage1_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
+					},
+					"AzureDataLakeStorage10_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage10_accountKey')]"
+					},
+					"AzureDataLakeStorage11_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage11_accountKey')]"
+					},
+					"AzureDataLakeStorage12_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage12_accountKey')]"
+					},
+					"AzureDataLakeStorage2_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage2_accountKey')]"
+					},
+					"AzureDataLakeStorage3_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage3_accountKey')]"
+					},
+					"AzureDataLakeStorage4_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage4_accountKey')]"
+					},
+					"AzureDataLakeStorage5_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage5_accountKey')]"
+					},
+					"AzureDataLakeStorage6_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage6_accountKey')]"
+					},
+					"AzureDataLakeStorage7_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage7_accountKey')]"
+					},
+					"AzureDataLakeStorage8_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage8_accountKey')]"
+					},
+					"AzureDataLakeStorage9_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage9_accountKey')]"
+					},
+					"DS_COPY_TABLES_accountKey": {
+						"value": "[parameters('DS_COPY_TABLES_accountKey')]"
+					},
+					"DS_copy_latest_file_accountKey": {
+						"value": "[parameters('DS_copy_latest_file_accountKey')]"
+					},
+					"DS_delete_file_006_accountKey": {
+						"value": "[parameters('DS_delete_file_006_accountKey')]"
+					},
+					"LS_COPY_accountKey": {
+						"value": "[parameters('LS_COPY_accountKey')]"
+					},
+					"LS_COPY_GEN2_007_accountKey": {
+						"value": "[parameters('LS_COPY_GEN2_007_accountKey')]"
+					},
+					"LS_COPY_SALES_accountKey": {
+						"value": "[parameters('LS_COPY_SALES_accountKey')]"
+					},
+					"LS_COPY_SWITCH_accountKey": {
+						"value": "[parameters('LS_COPY_SWITCH_accountKey')]"
+					},
+					"AzureDataLakeStorage1_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage10_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage10_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage11_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage11_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage12_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage12_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage2_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage2_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage3_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage3_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage4_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage4_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage5_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage5_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage6_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage6_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage7_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage7_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage8_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage8_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage9_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage9_properties_typeProperties_url')]"
+					},
+					"DS_COPY_TABLES_properties_typeProperties_url": {
+						"value": "[parameters('DS_COPY_TABLES_properties_typeProperties_url')]"
+					},
+					"DS_copy_latest_file_properties_typeProperties_url": {
+						"value": "[parameters('DS_copy_latest_file_properties_typeProperties_url')]"
+					},
+					"DS_delete_file_006_properties_typeProperties_url": {
+						"value": "[parameters('DS_delete_file_006_properties_typeProperties_url')]"
+					},
+					"LS_COPY_properties_typeProperties_url": {
+						"value": "[parameters('LS_COPY_properties_typeProperties_url')]"
+					},
+					"LS_COPY_GEN2_007_properties_typeProperties_url": {
+						"value": "[parameters('LS_COPY_GEN2_007_properties_typeProperties_url')]"
+					},
+					"LS_COPY_SALES_properties_typeProperties_url": {
+						"value": "[parameters('LS_COPY_SALES_properties_typeProperties_url')]"
+					},
+					"LS_COPY_SWITCH_properties_typeProperties_url": {
+						"value": "[parameters('LS_COPY_SWITCH_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "dfsritest007_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"LS_COPY_SWITCH_007_accountKey": {
+						"value": "[parameters('LS_COPY_SWITCH_007_accountKey')]"
+					},
+					"LS_COPY_SWITCH_GEN2_accountKey": {
+						"value": "[parameters('LS_COPY_SWITCH_GEN2_accountKey')]"
+					},
+					"LS_CSV_COPY_accountKey": {
+						"value": "[parameters('LS_CSV_COPY_accountKey')]"
+					},
+					"LS_CSV_GEN2_accountKey": {
+						"value": "[parameters('LS_CSV_GEN2_accountKey')]"
+					},
+					"LS_DELETE_FILE_accountKey": {
+						"value": "[parameters('LS_DELETE_FILE_accountKey')]"
+					},
+					"LS_EACH_COPY_accountKey": {
+						"value": "[parameters('LS_EACH_COPY_accountKey')]"
+					},
+					"LS_JSON_COPY_accountKey": {
+						"value": "[parameters('LS_JSON_COPY_accountKey')]"
+					},
+					"LS_JSON_GEN2_accountKey": {
+						"value": "[parameters('LS_JSON_GEN2_accountKey')]"
+					},
+					"LS_JSON_LOOKUP_accountKey": {
+						"value": "[parameters('LS_JSON_LOOKUP_accountKey')]"
+					},
+					"LS_LATEST_FILE_accountKey": {
+						"value": "[parameters('LS_LATEST_FILE_accountKey')]"
+					},
+					"LS_LOAD_CSV_accountKey": {
+						"value": "[parameters('LS_LOAD_CSV_accountKey')]"
+					},
+					"LS_LOOKUP_CSV_accountKey": {
+						"value": "[parameters('LS_LOOKUP_CSV_accountKey')]"
+					},
+					"LS_LOOKUP_gen2_accountKey": {
+						"value": "[parameters('LS_LOOKUP_gen2_accountKey')]"
+					},
+					"LS_METADATA_accountKey": {
+						"value": "[parameters('LS_METADATA_accountKey')]"
+					},
+					"LS_METADATA_EACH_accountKey": {
+						"value": "[parameters('LS_METADATA_EACH_accountKey')]"
+					},
+					"LS_SQLDB_CSV_accountKey": {
+						"value": "[parameters('LS_SQLDB_CSV_accountKey')]"
+					},
+					"LS_SQLDB_SINK_password": {
+						"value": "[parameters('LS_SQLDB_SINK_password')]"
+					},
+					"LS_SQLDB_SOURCE_password": {
+						"value": "[parameters('LS_SQLDB_SOURCE_password')]"
+					},
+					"LS_SQLDB_TABLES_password": {
+						"value": "[parameters('LS_SQLDB_TABLES_password')]"
+					},
+					"LS_SQLDB_WATERMARK_password": {
+						"value": "[parameters('LS_SQLDB_WATERMARK_password')]"
+					},
+					"LS_COPY_SWITCH_007_properties_typeProperties_url": {
+						"value": "[parameters('LS_COPY_SWITCH_007_properties_typeProperties_url')]"
+					},
+					"LS_COPY_SWITCH_GEN2_properties_typeProperties_url": {
+						"value": "[parameters('LS_COPY_SWITCH_GEN2_properties_typeProperties_url')]"
+					},
+					"LS_CSV_COPY_properties_typeProperties_url": {
+						"value": "[parameters('LS_CSV_COPY_properties_typeProperties_url')]"
+					},
+					"LS_CSV_GEN2_properties_typeProperties_url": {
+						"value": "[parameters('LS_CSV_GEN2_properties_typeProperties_url')]"
+					},
+					"LS_DELETE_FILE_properties_typeProperties_url": {
+						"value": "[parameters('LS_DELETE_FILE_properties_typeProperties_url')]"
+					},
+					"LS_EACH_COPY_properties_typeProperties_url": {
+						"value": "[parameters('LS_EACH_COPY_properties_typeProperties_url')]"
+					},
+					"LS_JSON_COPY_properties_typeProperties_url": {
+						"value": "[parameters('LS_JSON_COPY_properties_typeProperties_url')]"
+					},
+					"LS_JSON_GEN2_properties_typeProperties_url": {
+						"value": "[parameters('LS_JSON_GEN2_properties_typeProperties_url')]"
+					},
+					"LS_JSON_LOOKUP_properties_typeProperties_url": {
+						"value": "[parameters('LS_JSON_LOOKUP_properties_typeProperties_url')]"
+					},
+					"LS_LATEST_FILE_properties_typeProperties_url": {
+						"value": "[parameters('LS_LATEST_FILE_properties_typeProperties_url')]"
+					},
+					"LS_LOAD_CSV_properties_typeProperties_url": {
+						"value": "[parameters('LS_LOAD_CSV_properties_typeProperties_url')]"
+					},
+					"LS_LOOKUP_CSV_properties_typeProperties_url": {
+						"value": "[parameters('LS_LOOKUP_CSV_properties_typeProperties_url')]"
+					},
+					"LS_LOOKUP_gen2_properties_typeProperties_url": {
+						"value": "[parameters('LS_LOOKUP_gen2_properties_typeProperties_url')]"
+					},
+					"LS_METADATA_properties_typeProperties_url": {
+						"value": "[parameters('LS_METADATA_properties_typeProperties_url')]"
+					},
+					"LS_METADATA_EACH_properties_typeProperties_url": {
+						"value": "[parameters('LS_METADATA_EACH_properties_typeProperties_url')]"
+					},
+					"LS_SQLDB_CSV_properties_typeProperties_url": {
+						"value": "[parameters('LS_SQLDB_CSV_properties_typeProperties_url')]"
+					},
+					"LS_SQLDB_SINK_properties_typeProperties_server": {
+						"value": "[parameters('LS_SQLDB_SINK_properties_typeProperties_server')]"
+					},
+					"LS_SQLDB_SINK_properties_typeProperties_database": {
+						"value": "[parameters('LS_SQLDB_SINK_properties_typeProperties_database')]"
+					},
+					"LS_SQLDB_SINK_properties_typeProperties_userName": {
+						"value": "[parameters('LS_SQLDB_SINK_properties_typeProperties_userName')]"
+					},
+					"LS_SQLDB_SOURCE_properties_typeProperties_server": {
+						"value": "[parameters('LS_SQLDB_SOURCE_properties_typeProperties_server')]"
+					},
+					"LS_SQLDB_SOURCE_properties_typeProperties_database": {
+						"value": "[parameters('LS_SQLDB_SOURCE_properties_typeProperties_database')]"
+					},
+					"LS_SQLDB_SOURCE_properties_typeProperties_userName": {
+						"value": "[parameters('LS_SQLDB_SOURCE_properties_typeProperties_userName')]"
+					},
+					"LS_SQLDB_TABLES_properties_typeProperties_server": {
+						"value": "[parameters('LS_SQLDB_TABLES_properties_typeProperties_server')]"
+					},
+					"LS_SQLDB_TABLES_properties_typeProperties_database": {
+						"value": "[parameters('LS_SQLDB_TABLES_properties_typeProperties_database')]"
+					},
+					"LS_SQLDB_TABLES_properties_typeProperties_userName": {
+						"value": "[parameters('LS_SQLDB_TABLES_properties_typeProperties_userName')]"
+					},
+					"LS_SQLDB_WATERMARK_properties_typeProperties_server": {
+						"value": "[parameters('LS_SQLDB_WATERMARK_properties_typeProperties_server')]"
+					},
+					"LS_SQLDB_WATERMARK_properties_typeProperties_database": {
+						"value": "[parameters('LS_SQLDB_WATERMARK_properties_typeProperties_database')]"
+					},
+					"LS_SQLDB_WATERMARK_properties_typeProperties_userName": {
+						"value": "[parameters('LS_SQLDB_WATERMARK_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'dfsritest007_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "dfsritest007_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"LS_SQLTABLES_COPY_accountKey": {
+						"value": "[parameters('LS_SQLTABLES_COPY_accountKey')]"
+					},
+					"LS_copy_gen2_accountKey": {
+						"value": "[parameters('LS_copy_gen2_accountKey')]"
+					},
+					"LS_delete_file_007_accountKey": {
+						"value": "[parameters('LS_delete_file_007_accountKey')]"
+					},
+					"LS_sqldb_multi_tables_password": {
+						"value": "[parameters('LS_sqldb_multi_tables_password')]"
+					},
+					"Ls_delete_007_accountKey": {
+						"value": "[parameters('Ls_delete_007_accountKey')]"
+					},
+					"Lslookup_accountKey": {
+						"value": "[parameters('Lslookup_accountKey')]"
+					},
+					"linkedService1_connectionString": {
+						"value": "[parameters('linkedService1_connectionString')]"
+					},
+					"linkedService2_connectionString": {
+						"value": "[parameters('linkedService2_connectionString')]"
+					},
+					"linkedService3_connectionString": {
+						"value": "[parameters('linkedService3_connectionString')]"
+					},
+					"ls_for_each_csv_accountKey": {
+						"value": "[parameters('ls_for_each_csv_accountKey')]"
+					},
+					"LS_SQLTABLES_COPY_properties_typeProperties_url": {
+						"value": "[parameters('LS_SQLTABLES_COPY_properties_typeProperties_url')]"
+					},
+					"LS_copy_gen2_properties_typeProperties_url": {
+						"value": "[parameters('LS_copy_gen2_properties_typeProperties_url')]"
+					},
+					"LS_delete_file_007_properties_typeProperties_url": {
+						"value": "[parameters('LS_delete_file_007_properties_typeProperties_url')]"
+					},
+					"LS_http_properties_typeProperties_url": {
+						"value": "[parameters('LS_http_properties_typeProperties_url')]"
+					},
+					"LS_sqldb_multi_tables_properties_typeProperties_server": {
+						"value": "[parameters('LS_sqldb_multi_tables_properties_typeProperties_server')]"
+					},
+					"LS_sqldb_multi_tables_properties_typeProperties_database": {
+						"value": "[parameters('LS_sqldb_multi_tables_properties_typeProperties_database')]"
+					},
+					"LS_sqldb_multi_tables_properties_typeProperties_userName": {
+						"value": "[parameters('LS_sqldb_multi_tables_properties_typeProperties_userName')]"
+					},
+					"Ls_delete_007_properties_typeProperties_url": {
+						"value": "[parameters('Ls_delete_007_properties_typeProperties_url')]"
+					},
+					"Lslookup_properties_typeProperties_url": {
+						"value": "[parameters('Lslookup_properties_typeProperties_url')]"
+					},
+					"ls_for_each_csv_properties_typeProperties_url": {
+						"value": "[parameters('ls_for_each_csv_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'dfsritest007_ArmTemplate_1')]"
+			]
+		},
+		{
+			"name": "dfsritest007_ArmTemplate_3",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_3.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'dfsritest007_ArmTemplate_2')]"
+			]
+		},
+		{
+			"name": "dfsritest007_ArmTemplate_4",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_4.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"LS_LKP_MAX_VALUE_password": {
+						"value": "[parameters('LS_LKP_MAX_VALUE_password')]"
+					},
+					"LS_LOOKUP_MAX_VALUE_password": {
+						"value": "[parameters('LS_LOOKUP_MAX_VALUE_password')]"
+					},
+					"LS_LOOK_MAX_VALUE_password": {
+						"value": "[parameters('LS_LOOK_MAX_VALUE_password')]"
+					},
+					"LS_ON_SQL_SERVER_password": {
+						"value": "[parameters('LS_ON_SQL_SERVER_password')]"
+					},
+					"LS_SQLSERVER_TBLKP_password": {
+						"value": "[parameters('LS_SQLSERVER_TBLKP_password')]"
+					},
+					"LS_lookupdata_password": {
+						"value": "[parameters('LS_lookupdata_password')]"
+					},
+					"LS_LKP_MAX_VALUE_properties_typeProperties_server": {
+						"value": "[parameters('LS_LKP_MAX_VALUE_properties_typeProperties_server')]"
+					},
+					"LS_LKP_MAX_VALUE_properties_typeProperties_database": {
+						"value": "[parameters('LS_LKP_MAX_VALUE_properties_typeProperties_database')]"
+					},
+					"LS_LKP_MAX_VALUE_properties_typeProperties_userName": {
+						"value": "[parameters('LS_LKP_MAX_VALUE_properties_typeProperties_userName')]"
+					},
+					"LS_LOOKUP_MAX_VALUE_properties_typeProperties_server": {
+						"value": "[parameters('LS_LOOKUP_MAX_VALUE_properties_typeProperties_server')]"
+					},
+					"LS_LOOKUP_MAX_VALUE_properties_typeProperties_database": {
+						"value": "[parameters('LS_LOOKUP_MAX_VALUE_properties_typeProperties_database')]"
+					},
+					"LS_LOOKUP_MAX_VALUE_properties_typeProperties_userName": {
+						"value": "[parameters('LS_LOOKUP_MAX_VALUE_properties_typeProperties_userName')]"
+					},
+					"LS_LOOK_MAX_VALUE_properties_typeProperties_server": {
+						"value": "[parameters('LS_LOOK_MAX_VALUE_properties_typeProperties_server')]"
+					},
+					"LS_LOOK_MAX_VALUE_properties_typeProperties_database": {
+						"value": "[parameters('LS_LOOK_MAX_VALUE_properties_typeProperties_database')]"
+					},
+					"LS_LOOK_MAX_VALUE_properties_typeProperties_userName": {
+						"value": "[parameters('LS_LOOK_MAX_VALUE_properties_typeProperties_userName')]"
+					},
+					"LS_ON_SQL_SERVER_properties_typeProperties_server": {
+						"value": "[parameters('LS_ON_SQL_SERVER_properties_typeProperties_server')]"
+					},
+					"LS_ON_SQL_SERVER_properties_typeProperties_database": {
+						"value": "[parameters('LS_ON_SQL_SERVER_properties_typeProperties_database')]"
+					},
+					"LS_ON_SQL_SERVER_properties_typeProperties_userName": {
+						"value": "[parameters('LS_ON_SQL_SERVER_properties_typeProperties_userName')]"
+					},
+					"LS_SQLSERVER_TBLKP_properties_typeProperties_server": {
+						"value": "[parameters('LS_SQLSERVER_TBLKP_properties_typeProperties_server')]"
+					},
+					"LS_SQLSERVER_TBLKP_properties_typeProperties_database": {
+						"value": "[parameters('LS_SQLSERVER_TBLKP_properties_typeProperties_database')]"
+					},
+					"LS_SQLSERVER_TBLKP_properties_typeProperties_userName": {
+						"value": "[parameters('LS_SQLSERVER_TBLKP_properties_typeProperties_userName')]"
+					},
+					"LS_lookupdata_properties_typeProperties_server": {
+						"value": "[parameters('LS_lookupdata_properties_typeProperties_server')]"
+					},
+					"LS_lookupdata_properties_typeProperties_database": {
+						"value": "[parameters('LS_lookupdata_properties_typeProperties_database')]"
+					},
+					"LS_lookupdata_properties_typeProperties_userName": {
+						"value": "[parameters('LS_lookupdata_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'dfsritest007_ArmTemplate_3')]"
+			]
+		},
+		{
+			"name": "dfsritest007_ArmTemplate_5",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_5.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'dfsritest007_ArmTemplate_4')]"
+			]
+		}
+	]
+}

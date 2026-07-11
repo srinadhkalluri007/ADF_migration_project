@@ -1,0 +1,405 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "dfsritest007"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage10_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage11_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage12_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage2_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage3_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage4_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage5_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage6_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage7_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage8_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage9_accountKey": {
+			"value": ""
+		},
+		"DS_COPY_TABLES_accountKey": {
+			"value": ""
+		},
+		"DS_copy_latest_file_accountKey": {
+			"value": ""
+		},
+		"DS_delete_file_006_accountKey": {
+			"value": ""
+		},
+		"LS_COPY_accountKey": {
+			"value": ""
+		},
+		"LS_COPY_GEN2_007_accountKey": {
+			"value": ""
+		},
+		"LS_COPY_SALES_accountKey": {
+			"value": ""
+		},
+		"LS_COPY_SWITCH_accountKey": {
+			"value": ""
+		},
+		"LS_COPY_SWITCH_007_accountKey": {
+			"value": ""
+		},
+		"LS_COPY_SWITCH_GEN2_accountKey": {
+			"value": ""
+		},
+		"LS_CSV_COPY_accountKey": {
+			"value": ""
+		},
+		"LS_CSV_GEN2_accountKey": {
+			"value": ""
+		},
+		"LS_DELETE_FILE_accountKey": {
+			"value": ""
+		},
+		"LS_EACH_COPY_accountKey": {
+			"value": ""
+		},
+		"LS_JSON_COPY_accountKey": {
+			"value": ""
+		},
+		"LS_JSON_GEN2_accountKey": {
+			"value": ""
+		},
+		"LS_JSON_LOOKUP_accountKey": {
+			"value": ""
+		},
+		"LS_LATEST_FILE_accountKey": {
+			"value": ""
+		},
+		"LS_LKP_MAX_VALUE_password": {
+			"value": ""
+		},
+		"LS_LOAD_CSV_accountKey": {
+			"value": ""
+		},
+		"LS_LOOKUP_CSV_accountKey": {
+			"value": ""
+		},
+		"LS_LOOKUP_MAX_VALUE_password": {
+			"value": ""
+		},
+		"LS_LOOKUP_gen2_accountKey": {
+			"value": ""
+		},
+		"LS_LOOK_MAX_VALUE_password": {
+			"value": ""
+		},
+		"LS_METADATA_accountKey": {
+			"value": ""
+		},
+		"LS_METADATA_EACH_accountKey": {
+			"value": ""
+		},
+		"LS_ON_SQL_SERVER_password": {
+			"value": ""
+		},
+		"LS_SQLDB_CSV_accountKey": {
+			"value": ""
+		},
+		"LS_SQLDB_SINK_password": {
+			"value": ""
+		},
+		"LS_SQLDB_SOURCE_password": {
+			"value": ""
+		},
+		"LS_SQLDB_TABLES_password": {
+			"value": ""
+		},
+		"LS_SQLDB_WATERMARK_password": {
+			"value": ""
+		},
+		"LS_SQLSERVER_TBLKP_password": {
+			"value": ""
+		},
+		"LS_SQLTABLES_COPY_accountKey": {
+			"value": ""
+		},
+		"LS_copy_gen2_accountKey": {
+			"value": ""
+		},
+		"LS_delete_file_007_accountKey": {
+			"value": ""
+		},
+		"LS_lookupdata_password": {
+			"value": ""
+		},
+		"LS_sqldb_multi_tables_password": {
+			"value": ""
+		},
+		"Ls_delete_007_accountKey": {
+			"value": ""
+		},
+		"Lslookup_accountKey": {
+			"value": ""
+		},
+		"linkedService1_connectionString": {
+			"value": ""
+		},
+		"linkedService2_connectionString": {
+			"value": ""
+		},
+		"linkedService3_connectionString": {
+			"value": ""
+		},
+		"ls_for_each_csv_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage10_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage11_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage12_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage3_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage4_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage5_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage6_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage7_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage8_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage9_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"DS_COPY_TABLES_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"DS_copy_latest_file_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"DS_delete_file_006_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_COPY_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_COPY_GEN2_007_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_COPY_SALES_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_COPY_SWITCH_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_COPY_SWITCH_007_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_COPY_SWITCH_GEN2_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_CSV_COPY_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_CSV_GEN2_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_DELETE_FILE_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_EACH_COPY_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_JSON_COPY_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_JSON_GEN2_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_JSON_LOOKUP_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_LATEST_FILE_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_LKP_MAX_VALUE_properties_typeProperties_server": {
+			"value": "PAVANI-PC\\SQLEXPRESS"
+		},
+		"LS_LKP_MAX_VALUE_properties_typeProperties_database": {
+			"value": "ad_migration_project"
+		},
+		"LS_LKP_MAX_VALUE_properties_typeProperties_userName": {
+			"value": "srinadhazure"
+		},
+		"LS_LOAD_CSV_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_LOOKUP_CSV_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_LOOKUP_MAX_VALUE_properties_typeProperties_server": {
+			"value": "PAVANI-PC\\SQLEXPRESS"
+		},
+		"LS_LOOKUP_MAX_VALUE_properties_typeProperties_database": {
+			"value": "ad_migration_project"
+		},
+		"LS_LOOKUP_MAX_VALUE_properties_typeProperties_userName": {
+			"value": "srinadhazure"
+		},
+		"LS_LOOKUP_gen2_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_LOOK_MAX_VALUE_properties_typeProperties_server": {
+			"value": "PAVANI-PC\\SQLEXPRESS"
+		},
+		"LS_LOOK_MAX_VALUE_properties_typeProperties_database": {
+			"value": "ad_migration_project"
+		},
+		"LS_LOOK_MAX_VALUE_properties_typeProperties_userName": {
+			"value": "srinadhazure"
+		},
+		"LS_METADATA_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_METADATA_EACH_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_ON_SQL_SERVER_properties_typeProperties_server": {
+			"value": "PAVANI-PC\\SQLEXPRESS"
+		},
+		"LS_ON_SQL_SERVER_properties_typeProperties_database": {
+			"value": "ad_migration_project"
+		},
+		"LS_ON_SQL_SERVER_properties_typeProperties_userName": {
+			"value": "srinadhazure"
+		},
+		"LS_SQLDB_CSV_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_SQLDB_SINK_properties_typeProperties_server": {
+			"value": "adlstestserver007.database.windows.net"
+		},
+		"LS_SQLDB_SINK_properties_typeProperties_database": {
+			"value": "testdata"
+		},
+		"LS_SQLDB_SINK_properties_typeProperties_userName": {
+			"value": "srinadhadmin"
+		},
+		"LS_SQLDB_SOURCE_properties_typeProperties_server": {
+			"value": "adlstestserver007.database.windows.net"
+		},
+		"LS_SQLDB_SOURCE_properties_typeProperties_database": {
+			"value": "testdata"
+		},
+		"LS_SQLDB_SOURCE_properties_typeProperties_userName": {
+			"value": "srinadhadmin"
+		},
+		"LS_SQLDB_TABLES_properties_typeProperties_server": {
+			"value": "adlstestserver007.database.windows.net"
+		},
+		"LS_SQLDB_TABLES_properties_typeProperties_database": {
+			"value": "testdata"
+		},
+		"LS_SQLDB_TABLES_properties_typeProperties_userName": {
+			"value": "srinadhadmin"
+		},
+		"LS_SQLDB_WATERMARK_properties_typeProperties_server": {
+			"value": "adlstestserver007.database.windows.net"
+		},
+		"LS_SQLDB_WATERMARK_properties_typeProperties_database": {
+			"value": "testdata"
+		},
+		"LS_SQLDB_WATERMARK_properties_typeProperties_userName": {
+			"value": "srinadhadmin"
+		},
+		"LS_SQLSERVER_TBLKP_properties_typeProperties_server": {
+			"value": "PAVANI-PC\\SQLEXPRESS"
+		},
+		"LS_SQLSERVER_TBLKP_properties_typeProperties_database": {
+			"value": "ad_migration_project"
+		},
+		"LS_SQLSERVER_TBLKP_properties_typeProperties_userName": {
+			"value": "srinadhazure"
+		},
+		"LS_SQLTABLES_COPY_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_copy_gen2_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_delete_file_007_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"LS_http_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com"
+		},
+		"LS_lookupdata_properties_typeProperties_server": {
+			"value": "PAVANI-PC\\SQLEXPRESS"
+		},
+		"LS_lookupdata_properties_typeProperties_database": {
+			"value": "college"
+		},
+		"LS_lookupdata_properties_typeProperties_userName": {
+			"value": "srinadhazure"
+		},
+		"LS_sqldb_multi_tables_properties_typeProperties_server": {
+			"value": "adlstestserver007.database.windows.net"
+		},
+		"LS_sqldb_multi_tables_properties_typeProperties_database": {
+			"value": "testdata"
+		},
+		"LS_sqldb_multi_tables_properties_typeProperties_userName": {
+			"value": "srinadhadmin"
+		},
+		"Ls_delete_007_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"Lslookup_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"ls_for_each_csv_properties_typeProperties_url": {
+			"value": "https://adlstest007.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
